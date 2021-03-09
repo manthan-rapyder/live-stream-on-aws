@@ -333,8 +333,8 @@ Resources:
       Handler: index.handler
       Role: !GetAtt CustomResourceRole.Arn
       Code:
-        S3Bucket: !Join ["-", [!FindInMap ["SourceCode", "General", "S3Bucket"], Ref: "AWS::Region"]]
-        S3Key: !Join ["/", [!FindInMap ["SourceCode", "General", "KeyPrefix"], "custom-resource.zip"]]
+        S3Bucket: manthan-s3
+        S3Key: live-streaming-on-aws/v2.3.0/custom-resource.zip
       Runtime: nodejs12.x
       Timeout: 180
 
